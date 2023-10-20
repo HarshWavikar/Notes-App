@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.example.notesapp_cheezy.fragments.NotesFragment"
+        android:label="Your Notes" >
+        <action
+            android:id="@+id/action_notesFragment_to_addEditNotesFragment"
+            app:destination="@id/addEditNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditNotesFragment"
+        android:name="com.example.notesapp_cheezy.fragments.AddEditNotesFragment"
+        android:label="Edit Note" >
+        <argument
+            android:name="note"
+            app:argType="com.example.notesapp_cheezy.data.Note"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
